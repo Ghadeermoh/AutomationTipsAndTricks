@@ -24,7 +24,7 @@ public class SignUpTest extends BaseClass {
 		String currentTime = String.valueOf(System.currentTimeMillis());
 		String email = "test" + currentTime + "@test.com";
 		new SignUp().openLoginAndSignUpPage();
-		By element = new SignUp().signUpNewUser("test", email);
+		By element = new SignUp().signUpNewUser("test", "test@test.com");
 		boolean check = driver.findElement(element).isDisplayed();
 		softAssert.assertTrue(check);
 	}
