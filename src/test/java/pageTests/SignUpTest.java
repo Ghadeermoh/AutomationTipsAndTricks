@@ -10,7 +10,7 @@ import pages.BaseClass;
 import pages.SignUp;
 
 public class SignUpTest extends BaseClass {
-
+//git new branch
 	SoftAssert softAssert = new SoftAssert();
 
 	@BeforeClass
@@ -24,7 +24,7 @@ public class SignUpTest extends BaseClass {
 		String currentTime = String.valueOf(System.currentTimeMillis());
 		String email = "test" + currentTime + "@test.com";
 		new SignUp().openLoginAndSignUpPage();
-		By element = new SignUp().signUpNewUser("test", "test@test.com");
+		By element = new SignUp().signUpNewUser("test", email);
 		boolean check = driver.findElement(element).isDisplayed();
 		softAssert.assertTrue(check);
 	}
